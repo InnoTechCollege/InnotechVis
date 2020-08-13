@@ -1,0 +1,103 @@
+@import '_variables';
+
+@keyframes top-menu-forward {
+    50% {
+        transform: rotate(0deg);
+        top: 50%;
+    }
+    100% {
+        transform: rotate(45deg);
+        top: 50%;
+        background-color: $background-primary;
+    }
+}
+@keyframes middle-menu-forward {
+    100% {
+        transform: scale(0, 0);
+    }
+}
+@keyframes bottom-menu-forward {
+    50% {
+        transform: rotate(0deg);
+        top: 50%;
+    }
+    100% {
+        transform: rotate(-45deg);
+        top: 50%;
+        background-color: $background-primary;
+    }
+}
+@keyframes top-menu-backward {
+    0%  {
+        background-color: $background-primary;
+        transform: rotate(45deg);
+        top: 50%
+    }
+    50% {
+        transform: rotate(0deg);
+        top: 50%
+    }
+    100% {
+        top: 0;
+        background-color: $theme;
+    }
+}
+@keyframes middle-menu-backward {
+    0% {
+        transform: scale(0, 0);
+    }
+    100% {
+        transform: scale(100%, 100%);
+    }
+}
+@keyframes bottom-menu-backward {
+    0%  {
+        background-color: $background-primary;
+        transform: rotate(-45deg);
+        top: 50%
+    }
+    50% {
+        transform: rotate(0deg);
+        top: 50%
+    }
+    100% {
+        background-color: $theme;
+        top: 100%
+    }
+}
+
+@keyframes grow-height {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes shrink-height {
+    0% {
+        height: 100%;
+    }
+    100% {
+        height: 0%;
+    }
+}
+
+@keyframes grow-height-half {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 50%;
+    }
+}
+
+@keyframes shrink-height-half {
+    0% {
+        height: 50%;
+    }
+    100% {
+        height: 0%;
+    }
+}
