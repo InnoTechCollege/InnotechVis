@@ -1,0 +1,22 @@
+#footer {
+    margin-top: 3vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    color: $background-primary;
+    background-color: $theme;
+    p {
+        padding: 3vh 3vw;
+    }
+    a {
+        color: $background-primary;
+        font-weight: bold;
+
+        &visited {
+            color: $background-primary;
+        }
+    }
+
+}

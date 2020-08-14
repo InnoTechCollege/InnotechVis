@@ -252,14 +252,6 @@ a {
   text-decoration: none;
 }
 
-.line-spacer {
-  margin: 2vh 0;
-  width: 50%;
-  max-width: 350px;
-  height: 2px;
-  background-color: #003459;
-}
-
 .button {
   border-radius: 10px;
   margin: 2vh 0;
@@ -313,20 +305,15 @@ a {
   color: #FFFFFF;
 }
 
-#grid-container {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
+.line-spacer {
+  margin: 2vh 0;
+  width: 50%;
+  max-width: 350px;
+  height: 2px;
+  background-color: #003459;
 }
 
-#grid-container #header {
-  width: 100%;
-}
-
-#grid-container #mobile-header {
+#mobile-header {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -338,12 +325,12 @@ a {
   min-height: 10vh;
 }
 
-#grid-container #mobile-header #mobile-logo {
+#mobile-header #mobile-logo {
   color: #003459;
   font-weight: bold;
 }
 
-#grid-container #mobile-header #mobile-hamburger {
+#mobile-header #mobile-hamburger {
   -ms-grid-column-align: center;
       justify-self: center;
   position: relative;
@@ -352,7 +339,7 @@ a {
   z-index: 3;
 }
 
-#grid-container #mobile-header #mobile-hamburger #mobile-checkbox {
+#mobile-header #mobile-hamburger #mobile-checkbox {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -360,7 +347,7 @@ a {
   opacity: 0;
 }
 
-#grid-container #mobile-header #mobile-hamburger #mobile-checkbox:checked ~ #menu-line1 {
+#mobile-header #mobile-hamburger #mobile-checkbox:checked ~ #menu-line1 {
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   -webkit-animation: top-menu-forward 0.5s ease-in-out;
@@ -371,7 +358,7 @@ a {
           animation-fill-mode: forwards;
 }
 
-#grid-container #mobile-header #mobile-hamburger #mobile-checkbox:checked ~ #menu-line2 {
+#mobile-header #mobile-hamburger #mobile-checkbox:checked ~ #menu-line2 {
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   -webkit-animation: middle-menu-forward 0.25s ease-in-out;
@@ -382,7 +369,7 @@ a {
           animation-fill-mode: forwards;
 }
 
-#grid-container #mobile-header #mobile-hamburger #mobile-checkbox:checked ~ #menu-line3 {
+#mobile-header #mobile-hamburger #mobile-checkbox:checked ~ #menu-line3 {
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   -webkit-animation: bottom-menu-forward 0.5s ease-in-out;
@@ -393,7 +380,7 @@ a {
           animation-fill-mode: forwards;
 }
 
-#grid-container #mobile-header #mobile-hamburger .menu-line {
+#mobile-header #mobile-hamburger .menu-line {
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   -webkit-animation-iteration-count: 1;
@@ -408,26 +395,39 @@ a {
   border-radius: 10px;
 }
 
-#grid-container #mobile-header #mobile-hamburger #menu-line1 {
+#mobile-header #mobile-hamburger #menu-line1 {
   -webkit-animation: top-menu-backward 0.5s ease-in-out;
           animation: top-menu-backward 0.5s ease-in-out;
   top: 0;
 }
 
-#grid-container #mobile-header #mobile-hamburger #menu-line2 {
+#mobile-header #mobile-hamburger #menu-line2 {
   -webkit-animation: middle-menu-backward 0.5s ease-in-out;
           animation: middle-menu-backward 0.5s ease-in-out;
   top: 50%;
 }
 
-#grid-container #mobile-header #mobile-hamburger #menu-line3 {
+#mobile-header #mobile-hamburger #menu-line3 {
   -webkit-animation: bottom-menu-backward 0.5s ease-in-out;
           animation: bottom-menu-backward 0.5s ease-in-out;
   top: 100%;
 }
 
-#grid-container #desktop-header {
+#desktop-header {
   display: none;
+}
+
+#grid-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+#grid-container #header {
+  width: 100%;
 }
 
 #grid-container #info-message-container {
@@ -563,7 +563,7 @@ a {
 }
 
 #grid-container .level-container .level-buttons-container {
-  width: 100%;
+  width: 90%;
   display: -ms-grid;
   display: grid;
   justify-items: center;
@@ -572,6 +572,8 @@ a {
           align-items: center;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
 }
 
 #grid-container #footer {
