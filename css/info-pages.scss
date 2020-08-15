@@ -1,0 +1,67 @@
+@import '_site-wide';
+@import '_mobile-header';
+@import '_footer';
+
+#grid-container {
+    @include center-grid();
+    text-align: center;
+
+    #header {
+        width: 100%;
+    }
+
+    #topic-content-container {
+        min-height: 80vh;
+        @include center-grid();
+        max-width: 1000px;
+        width: 100%;
+
+        #topic-banner {
+            @include center-grid();
+            width: 100%;
+            height: 100%;
+            max-height: 275px;
+            color: $background-primary;
+            background-image: url("../images/coding-background.png");
+            h1 {
+                padding: 3vh 2vw;
+            }
+        }
+
+        #topic-information {
+            @include center-grid();
+            width: 95%;
+
+            ul {
+                list-style-position: inside;
+            }
+
+            li {
+                text-align: left;
+                padding: 1vh 1vw;
+            }
+        }
+
+
+
+            .sub-topic-header {
+                width: 96%;
+                text-align: left;
+                padding: 3vh 3vw;
+            }
+    
+            .sub-topic-info {
+                display: none;
+            }
+        
+    }
+}
+
+
+
+.topic-svg {
+    fill: $theme;
+    padding: 3vh 3vw;
+    max-height: 100px;
+}
+

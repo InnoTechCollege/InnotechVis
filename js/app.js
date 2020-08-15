@@ -7,7 +7,14 @@ const disclaimerContent = document.getElementById("disclaimer-content");
 const disclaimerContainer = document.getElementById("disclaimer-container");
 
 function openPage(target) {
-    window.open(target);
+    window.open(target, "_self");
+}
+
+function toggleSubTopic(element) {
+    let display = element.nextElementSibling.style.display;
+    console.log(display);
+    if (display == "none") display = "block";
+    else display = "none";
 }
 
 function toggleMenu() {
@@ -32,7 +39,7 @@ function toggleDisclaimer() {
 }
 
 function frontEndOn() {
-    if(frontEndActive) return;
+    if (frontEndActive) return;
     frontEndActive = true;
     document.getElementById("front-end-button").classList.remove("inactive-path");
     document.getElementById("front-end-button").classList.add("active-path");
@@ -46,7 +53,7 @@ function frontEndOn() {
 }
 
 function backEndOn() {
-    if(!frontEndActive) return;
+    if (!frontEndActive) return;
     frontEndActive = false;
     document.getElementById("front-end-button").classList.remove("active-path");
     document.getElementById("front-end-button").classList.add("inactive-path");

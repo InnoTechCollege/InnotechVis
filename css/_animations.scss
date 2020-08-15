@@ -101,3 +101,27 @@
         height: 0%;
     }
 }
+
+.grow-height {
+    animation: grow-height 0.5s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.shrink-height {
+    animation: shrink-height 0.5s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.grow-height-half {
+    animation: grow-height-half 0.5s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.shrink-height-half {
+    animation: shrink-height-half 0.5s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}

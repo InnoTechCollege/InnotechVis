@@ -13,20 +13,13 @@
     color: $background-primary;
 }
 
-.line-spacer {
-    margin: 2vh 0;
-    width: 50%;
-    max-width: 350px;
-    height: 2px;
-    background-color: $theme;
-}
-
 #mobile-header {
     display: grid;
     align-items: center;
     justify-items: center;
     grid-template-columns: 1fr 3fr 1fr;
     min-height: 10vh;
+    width: 100%;
     #mobile-logo {
         color: $theme;
         font-weight: bold;
