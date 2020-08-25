@@ -46,6 +46,11 @@
             width: 96%;
             text-align: left;
             padding: 3vh 3vw;
+
+            &:hover {
+                cursor: pointer;
+            }
+
         }
     }
 }

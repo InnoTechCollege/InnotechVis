@@ -331,6 +331,9 @@ img {
   text-align: left;
   padding: 3vh 3vw;
 }
+#grid-container #topic-content-container .sub-topic-header:hover {
+  cursor: pointer;
+}
 
 .sub-topic-info {
   display: none;
