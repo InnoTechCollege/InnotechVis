@@ -1,5 +1,6 @@
 @import '_site-wide';
 @import '_mobile-header';
+@import '_footer';
 
 #grid-container {
     display: grid;
@@ -21,6 +22,7 @@
             max-width: 200px;
             fill: $theme;
         }
+
         p {
             padding: 0 2vw;
         }
@@ -32,7 +34,7 @@
             box-shadow: 7px 7px 20px #ABABAB;
             left: 5%;
             top: 25%;
-            max-height: 500px;           
+            max-height: 500px;
         }
 
         #disclaimer-content {
@@ -51,7 +53,7 @@
                 display: grid;
                 justify-items: center;
                 align-items: center;
-                
+
             }
         }
     }
@@ -95,7 +97,7 @@
             }
         }
     }
-    
+
     .active-content {
         display: grid;
         justify-items: center;
@@ -126,7 +128,7 @@
             column-gap: 20px;
         }
     }
-    @import '_footer';
+
 }
 
 #diclaimer-exit-container {

@@ -11,10 +11,12 @@ function openPage(target) {
 }
 
 function toggleSubTopic(element) {
-    let display = element.nextElementSibling.style.display;
-    console.log(display);
-    if (display == "none") display = "block";
-    else display = "none";
+    let info = element.nextElementSibling;
+    console.log(element.innerHTML.endsWith("+"));
+    if(element.innerHTML.endsWith("+")) { element.innerHTML =  element.innerHTML.replace("+", "-"); }
+    else { element.innerHTML = element.innerHTML.replace("-", "+"); }
+    info.classList.toggle("sub-topic-info");
+    info.classList.toggle("sub-topic-info-show");
 }
 
 function toggleMenu() {

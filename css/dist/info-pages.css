@@ -1,0 +1,349 @@
+@keyframes top-menu-forward {
+  50% {
+    transform: rotate(0deg);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(45deg);
+    top: 50%;
+    background-color: #FFFFFF;
+  }
+}
+@keyframes middle-menu-forward {
+  100% {
+    transform: scale(0, 0);
+  }
+}
+@keyframes bottom-menu-forward {
+  50% {
+    transform: rotate(0deg);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(-45deg);
+    top: 50%;
+    background-color: #FFFFFF;
+  }
+}
+@keyframes top-menu-backward {
+  0% {
+    background-color: #FFFFFF;
+    transform: rotate(45deg);
+    top: 50%;
+  }
+  50% {
+    transform: rotate(0deg);
+    top: 50%;
+  }
+  100% {
+    top: 0;
+    background-color: #003459;
+  }
+}
+@keyframes middle-menu-backward {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(100%, 100%);
+  }
+}
+@keyframes bottom-menu-backward {
+  0% {
+    background-color: #FFFFFF;
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+  50% {
+    transform: rotate(0deg);
+    top: 50%;
+  }
+  100% {
+    background-color: #003459;
+    top: 100%;
+  }
+}
+@keyframes grow-height {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@keyframes shrink-height {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+@keyframes grow-height-half {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 50%;
+  }
+}
+@keyframes shrink-height-half {
+  0% {
+    height: 50%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+.grow-height {
+  animation: grow-height 0.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.shrink-height {
+  animation: shrink-height 0.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.grow-height-half {
+  animation: grow-height-half 0.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.shrink-height-half {
+  animation: shrink-height-half 0.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.button {
+  border-radius: 10px;
+  margin: 2vh 0;
+  padding: 2vh 2vw;
+  background-color: #007EA7;
+  color: #FFFFFF;
+  box-shadow: 3px 3px 8px #ABABAB;
+  transition: all 0.1s ease-in;
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.topic-button {
+  padding: 5vh 2vw;
+  width: 90%;
+  max-width: 350px;
+}
+
+.button:active {
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #ABABAB;
+}
+
+.line-spacer {
+  margin: 3vh 0;
+  width: 50%;
+  max-width: 350px;
+  height: 2px;
+  background-color: #003459;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Mulish", sans-serif;
+}
+
+a {
+  width: 100%;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+#mobile-menu {
+  position: absolute;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #00171F;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 0vh;
+  z-index: 2;
+  color: #FFFFFF;
+}
+
+#mobile-header {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 3fr 1fr;
+  min-height: 10vh;
+  width: 100%;
+}
+#mobile-header #mobile-logo {
+  color: #003459;
+  font-weight: bold;
+}
+#mobile-header #mobile-hamburger {
+  justify-self: center;
+  position: relative;
+  width: 40%;
+  height: 30%;
+  z-index: 3;
+}
+#mobile-header #mobile-hamburger #mobile-checkbox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 4;
+  opacity: 0;
+}
+#mobile-header #mobile-hamburger #mobile-checkbox:checked ~ #menu-line1 {
+  transform-origin: 50% 50%;
+  animation: top-menu-forward 0.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+#mobile-header #mobile-hamburger #mobile-checkbox:checked ~ #menu-line2 {
+  transform-origin: 50% 50%;
+  animation: middle-menu-forward 0.25s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+#mobile-header #mobile-hamburger #mobile-checkbox:checked ~ #menu-line3 {
+  transform-origin: 50% 50%;
+  animation: bottom-menu-forward 0.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+#mobile-header #mobile-hamburger .menu-line {
+  transform-origin: 50% 50%;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  position: absolute;
+  width: 100%;
+  max-width: 50px;
+  height: 3px;
+  background-color: #003459;
+  border-radius: 10px;
+}
+#mobile-header #mobile-hamburger #menu-line1 {
+  animation: top-menu-backward 0.5s ease-in-out;
+  top: 0;
+}
+#mobile-header #mobile-hamburger #menu-line2 {
+  animation: middle-menu-backward 0.5s ease-in-out;
+  top: 50%;
+}
+#mobile-header #mobile-hamburger #menu-line3 {
+  animation: bottom-menu-backward 0.5s ease-in-out;
+  top: 100%;
+}
+
+#desktop-header {
+  display: none;
+}
+
+#footer {
+  margin-top: 3vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  color: #FFFFFF;
+  background-color: #003459;
+}
+#footer p {
+  padding: 3vh 3vw;
+}
+#footer a {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+#footer avisited {
+  color: #FFFFFF;
+}
+
+#grid-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+#grid-container #header {
+  width: 100%;
+}
+#grid-container #topic-content-container {
+  min-height: 80vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+}
+#grid-container #topic-content-container #topic-banner {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 275px;
+  color: #FFFFFF;
+  background-image: url("../images/coding-background.png");
+}
+#grid-container #topic-content-container #topic-banner h1 {
+  padding: 3vh 2vw;
+}
+#grid-container #topic-content-container #topic-information {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 95%;
+}
+#grid-container #topic-content-container #topic-information ul {
+  list-style-position: inside;
+}
+#grid-container #topic-content-container #topic-information li {
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#grid-container #topic-content-container .sub-topic-header {
+  width: 96%;
+  text-align: left;
+  padding: 3vh 3vw;
+}
+
+.sub-topic-info {
+  display: none;
+}
+
+.sub-topic-info-show {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.topic-svg {
+  fill: #003459;
+  padding: 3vh 3vw;
+  max-height: 100px;
+}

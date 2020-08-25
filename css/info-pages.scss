@@ -19,10 +19,10 @@
         #topic-banner {
             @include center-grid();
             width: 100%;
-            height: 100%;
-            max-height: 275px;
+            height: 275px;
             color: $background-primary;
             background-image: url("../images/coding-background.png");
+
             h1 {
                 padding: 3vh 2vw;
             }
@@ -42,26 +42,24 @@
             }
         }
 
-
-
-            .sub-topic-header {
-                width: 96%;
-                text-align: left;
-                padding: 3vh 3vw;
-            }
-    
-            .sub-topic-info {
-                display: none;
-            }
-        
+        .sub-topic-header {
+            width: 96%;
+            text-align: left;
+            padding: 3vh 3vw;
+        }
     }
 }
 
+.sub-topic-info {
+    display: none;
+}
 
+.sub-topic-info-show {
+    @include center-grid();
+}
 
 .topic-svg {
     fill: $theme;
     padding: 3vh 3vw;
     max-height: 100px;
 }
-
