@@ -102,6 +102,12 @@
     }
 }
 
+@keyframes vanish {
+    100% {
+        display: none;
+    }
+}
+
 .grow-height {
     animation: grow-height 0.5s ease-in-out;
     animation-iteration-count: 1;

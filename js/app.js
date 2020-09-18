@@ -73,8 +73,8 @@ function openMenu() {
     intervals.add(interval);
     mobileMenu.style.height = "5px";
     function open() {
-        if (mobileMenu.clientHeight >= 200) { clearInterval(interval); intervals.delete(interval); }
-        let height = mobileMenu.clientHeight * 1.1;
+        if (mobileMenu.clientHeight >= 200) {  clearInterval(interval); intervals.delete(interval); }
+        let height = mobileMenu.clientHeight * 1.2;
         mobileMenu.style.height = height + "px";
     }
 }
@@ -84,7 +84,7 @@ function closeMenu() {
     intervals.add(interval);
     function close() {
         if (mobileMenu.clientHeight <= 5) { clearInterval(interval); mobileMenu.style.height = "0px"; intervals.delete(interval); }
-        let height = mobileMenu.clientHeight / 1.1;
+        let height = mobileMenu.clientHeight / 1.2;
         mobileMenu.style.height = height + "px";
     }
 }

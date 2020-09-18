@@ -15,6 +15,8 @@
         @include center-grid();
         max-width: 1000px;
         width: 100%;
+        grid-template-rows: 275px auto;
+
 
         #topic-banner {
             @include center-grid();
@@ -23,6 +25,7 @@
             color: $background-primary;
             background-image: url("../images/coding-background.png");
 
+
             h1 {
                 padding: 3vh 2vw;
             }
@@ -30,6 +33,7 @@
 
         #topic-information {
             @include center-grid();
+            align-self: start;
             width: 95%;
 
             ul {

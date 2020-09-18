@@ -234,6 +234,18 @@
   }
 }
 
+@-webkit-keyframes vanish {
+  100% {
+    display: none;
+  }
+}
+
+@keyframes vanish {
+  100% {
+    display: none;
+  }
+}
+
 .grow-height {
   -webkit-animation: grow-height 0.5s ease-in-out;
           animation: grow-height 0.5s ease-in-out;
